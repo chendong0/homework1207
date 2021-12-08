@@ -5,11 +5,11 @@ import (
 )
 
 //全局变量声明
-//var totalFatRates float64
+var totalFatRates float64
 
 func main() {
 
-	fmt.Println("hello99") //启动信息
+	fmt.Println("hello1208") //启动信息
 
 	//短变量声明
 	Weights := [3]float64{} //体重(KG)
@@ -19,6 +19,7 @@ func main() {
 	Names, Talls, Ages, bmis := [3]string{}, [3]float64{}, [3]int{}, [3]float64{}
 	//身高(m)
 	//不能var 和 := 一起使用
+	//name string := "chen"//将会报错,因为编译器会自动推断
 
 	FatRates := [3]float64{}
 	fmt.Print(FatRates) //测试FatRates
@@ -166,5 +167,9 @@ func main() {
 
 			}
 		}
+	}
+
+	for i := 0; i < 3; i++ {
+		totalFatRates += FatRates[i]
 	}
 }
